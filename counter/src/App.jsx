@@ -3,6 +3,7 @@ import myLogo from './assets/logo.png'
 import './App.css'
 
 function App() {
+
   const [count, setCount] = useState(0)
 
   return (
@@ -13,17 +14,12 @@ function App() {
         </a>
 
         <h1>My Counter</h1>
-        <div className="card">
-          <button onClick={() => setCount((count) => count + 1)}>
-            count is {count}
-          </button>
-          <p>
-            First react Project
-          </p>
-        </div>
-        <p className="read-the-docs">
-          Click on the Vite and React logos to learn more
+        <button onClick={ ()=> setCount( count + 1)} >count { count }</button>
+        <p>
+          My first react project
         </p>
+
+        <p>Click on the logo to get my github</p>
 
     </section>
   )

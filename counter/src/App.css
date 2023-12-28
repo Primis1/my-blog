@@ -18,15 +18,33 @@
   min-width: 700px;
   border-radius: 60px;
   border: 1px solid transparent;
-  border-color: #646cff;
   background-color: #0D0C27;
+  position: relative;
 
   transition: filter .2s ease-in-out;
 }
 
-.block:hover {
-  filter: drop-shadow(0 0 10px #646cff);
+.block::before{
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #646cff;
+  transform: scaleX(0);
+  transform-origin: right, top;
+  transition: all .3s;
 }
+
+.block:hover::before{
+ transform: scaleX(1);
+ transform-origin: left, bottom;
+}
+
+/* .block:hover {
+  filter: drop-shadow(0 0 10px #646cff);
+} */
 
 .logo {
   height: 6em;
@@ -41,12 +59,6 @@
   /* border-color: #646cff; */
   border-radius: 30px;
   background-color: #646cff;  
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
 }
 
 .card {
