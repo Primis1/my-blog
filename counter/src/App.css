@@ -68,3 +68,11 @@
 .read-the-docs {
   color: #888;
 }
+
+.display {
+  font: 40px Roboto, bold;
+}
+
+.btn__wrapper {
+  display: flex;
+}

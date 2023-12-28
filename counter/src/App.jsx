@@ -4,7 +4,7 @@ import './App.css'
 
 function App() {
 
-  const [count, setCount] = useState(0)
+  let [count, setCount] = useState(0)
 
   return (
     <section className='block'>
@@ -14,7 +14,14 @@ function App() {
         </a>
 
         <h1>My Counter</h1>
-        <button onClick={ ()=> setCount( count + 1)} >count { count }</button>
+
+        <p className='display'>{ count }</p>
+
+        <div className='btn__wrapper'>
+          <button onClick={ ()=> setCount( count - 1)}> - </button>
+          <button onClick={ ()=> setCount( count = 0)}> clear </button>
+          <button onClick={ ()=> setCount( count + 1)}> + </button>
+        </div>
         <p>
           My first react project
         </p>
