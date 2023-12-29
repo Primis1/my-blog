@@ -18,9 +18,9 @@ function App() {
         <p className='display'>{ count }</p>
 
         <div className='btn__wrapper'>
-          <button className='btn' onClick={ () => setCount( count <= -10 ? count - 10 : count - 1)}> - </button>
+          <button className='btn' onClick={ () => setCount( count <= -10 || count>10? count - 10 : count - 1)}> - </button>
           <button className='btn' onClick={ () => setCount( count = 0)}> clear </button>
-          <button className='btn' onClick={ () => setCount( count < 10 ? count + 1 : count + 10)}> + </button>
+          <button className='btn' onClick={ () => setCount( count >= 10 || count<-10? count + 10 : count + 1 )}> + </button>
         </div>
         <p>
           My first react project
