@@ -1,7 +1,7 @@
-import express from 'express'
-let app = express()
+import express from 'express';
+let app = express();
 
 app.get('/', (_req, res)=>{
-    res.sendfile(__dirname +'index.html')
+    res.sendFile('index.html', {root: __dirname});
 })
-app.listen(80)
+app.listen(8080, ()=>{console.log("LISTENING ON PORT :8080")});
