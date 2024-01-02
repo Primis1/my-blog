@@ -12,5 +12,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    
+  }
+
+  .fixed {
+    position: fixed;
+    right: 5rem;
+    bottom: 10rem;
   }

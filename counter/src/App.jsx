@@ -29,7 +29,7 @@ function App() {
         <p>Click on the logo to get my github</p>
 
     </section>
-  )
+    )
 }
 
 export default App

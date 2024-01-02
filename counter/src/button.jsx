@@ -12,12 +12,7 @@ function Btn() {
             {open && <App />}
         </body>
 
-        // <>
-        // <button onClick={ () => setOpen(true)}>Begin count</button>
-
-        // {open && < App/>}
-        // </>
-            )
+    )
 }
 
 export default Btn;
